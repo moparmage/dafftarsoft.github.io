@@ -1,33 +1,478 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-    <title>My Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية - دفتر سوفت</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
-        header { text-align: center; margin-bottom: 30px; }
+        :root {
+            --primary: #4a6bdf;
+            --secondary: #f8f9fa;
+            --text: #333;
+            --border: #e1e1e1;
+        }
+        body {
+            font-family: 'Tajawal', 'Segoe UI', Tahoma, sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7ff;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 0 25px rgba(0,0,0,0.08);
+            border-radius: 12px;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 25px;
+            border-bottom: 2px solid var(--primary);
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 35px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed var(--border);
+        }
+        h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-top: 25px;
+        }
+        .highlight-box {
+            background-color: #f0f4ff;
+            padding: 15px;
+            border-left: 4px solid var(--primary);
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        .data-table th, .data-table td {
+            padding: 12px 15px;
+            border: 1px solid var(--border);
+            text-align: right;
+        }
+        .data-table th {
+            background-color: var(--secondary);
+            color: #444;
+        }
+        .data-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .language-switcher {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .language-switcher button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .language-switcher button:hover {
+            background: #3a5bd9;
+            transform: translateY(-2px);
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+            color: #666;
+        }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul, ol {
+            padding-right: 20px;
+        }
+        code {
+            background: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            word-break: break-all;
+        }
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .data-table {
+                font-size: 0.8em;
+            }
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Project</h1>
-    </header>
-    
-    <section>
-        <h2>About</h2>
-        <p>This is a description of my project.</p>
-    </section>
-    
-    <section>
-        <h2>Features</h2>
-        <ul>
-            <li>Feature 1</li>
-            <li>Feature 2</li>
-            <li>Feature 3</li>
-        </ul>
-    </section>
-    
-    <footer>
-        <p><a href="privacy.html">Privacy Policy</a></p>
-    </footer>
+    <div class="container">
+        <header>
+            <h1 id="title">سياسة الخصوصية لـ دفتر سوفت</h1>
+            <p id="last-update">اخر تحديث: ١٥ يونيو ٢٠٢٤</p>
+        </header>
+
+        <div class="language-switcher">
+            <button onclick="switchLanguage('ar')">العربية</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+
+        <div id="ar-content">
+            <div class="highlight-box">
+  <p>طور <strong>Developer Soft</strong> تطبيق دفتر سوفت كتطبيق محاسبي. هذه الخدمة مقدمة   وهي مخصصة للاستخدام كما هي.</p>
+  <p>باستخدامك للتطبيق، فإنك توافق على جمع واستخدام المعلومات وفقاً لهذه السياسة.</p>
+            </div>
+
+            <h2>١. المعلومات التي نجمعها</h2>
+            
+            <h3>أ. البيانات المرسلة إلى الخادم</h3>
+            <p>عند استخدامك للتطبيق، نرسل البيانات التالية إلى خادمنا الآمن:</p>
+            
+            <table class="data-table">
+                <tr>
+                    <th>نوع البيانات</th>
+                    <th>الغرض</th>
+                    <th>مثال</th>
+                </tr>
+                <tr>
+                    <td>كود الملف الشخصي</td>
+                    <td>تحديد الملف بشكل فريد</td>
+                    <td>PRF_12345</td>
+                </tr>
+                <tr>
+                    <td>عدد العملاء</td>
+                    <td>التحليل الإحصائي</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>معرف الجهاز</td>
+                    <td>منع الاستخدام غير المصرح به</td>
+                    <td>d7f6g8h9</td>
+                </tr>
+            </table>
+            
+            <p>يتم إرسال هذه البيانات إلى:<br>
+            <code>https://dafftar.com/api/mobile-module/party-profiles/CreatePartyProfile</code></p>
+
+            <h3>ب. بيانات التطبيق المحلية</h3>
+            <p>يخزن التطبيق البيانات التالية على جهازك فقط:</p>
+            <ul>
+                <li>إعدادات المستخدم</li>
+                <li>الملفات الشخصية المحلية</li>
+                <li> العمليات على التطبيق</li>
+                <li>النسخ الاحتياطية</li>
+            </ul>
+
+            <h2>٢. الأذونات المطلوبة</h2>
+            <table class="data-table">
+                <tr>
+                    <th>الإذن</th>
+                    <th>الغرض</th>
+                    <th>متى يتم استخدامه</th>
+                </tr>
+                <tr>
+                    <td>قراءة/كتابة التخزين</td>
+                    <td>حفظ وقراءة النسخ الاحتياطية</td>
+                    <td>عند طلب المستخدم</td>
+                </tr>
+                <tr>
+                    <td>الإنترنت</td>
+                    <td>مزامنة البيانات مع الخادم</td>
+                    <td>عند فتح التطبيق</td>
+                </tr>
+                <tr>
+                    <td>حالة الشبكة</td>
+                    <td>الكشف عن اتصال الإنترنت</td>
+                    <td>عند بدء التطبيق</td>
+                </tr>
+                <tr>
+                    <td>الإشعارات</td>
+                    <td>إرسال تنبيهات للمستخدمين</td>
+                    <td>عند وجود تحديثات</td>
+                </tr>
+            </table>
+
+            <h2>٣. بيانات السجل والتحليلات</h2>
+            <p>في حال حدوث أخطاء، قد نقوم بتسجيل:</p>
+            <ul>
+                <li>نوع وموديل الجهاز</li>
+                <li>إصدار نظام التشغيل</li>
+                <li>وقت وتاريخ الحدث</li>
+                <li>عنوان IP (لأغراض الأمان)</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <p>هذه البيانات تساعدنا في تحسين التطبيق وهي مجهولة الهوية.</p>
+            </div>
+
+            <h2>٤. حماية البيانات</h2>
+            <p>نحن نستخدم:</p>
+            <ol>
+                <li>تشفير SSL/TLS 256-bit لجميع الاتصالات</li>
+                <li>خوادم آمنة مع جدران حماية</li>
+                <li>تحديثات أمنية منتظمة</li>
+            </ol>
+
+            <h2>٥. الاحتفاظ بالبيانات</h2>
+            <p>نحتفظ بالبيانات المرسلة إلى الخادم لمدة <strong>12 شهراً</strong> من آخر نشاط، ثم يتم حذفها تلقائياً.</p>
+
+            <h2>٦. مشاركة البيانات</h2>
+            <p>لا نبيع أو نشارك بياناتك مع أطراف ثالثة إلا في الحالات التالية:</p>
+            <ul>
+                <li>عندما يكون ذلك مطلوباً قانونياً</li>
+                <li>لحماية حقوقنا أو سلامة المستخدمين</li>
+            </ul>
+
+            <h2>٧. خصوصية الأطفال</h2>
+            <p>التطبيق غير مصمم للاستخدام من قبل الأطفال تحت سن 13 عاماً. نحن:</p>
+            <ul>
+                <li>لا نجمع معلومات شخصية عن قصد من الأطفال</li>
+                <li>إذا اكتشفنا جمع معلومات لطفل تحت 13 سنة، سنحذفها فوراً</li>
+            </ul>
+
+            <h2>٨. حقوق المستخدم</h2>
+            <p>يمكنك:</p>
+            <div class="highlight-box">
+                <ul>
+                    <li>طلب نسخة من بياناتك</li>
+                    <li>طلب تصحيح الأخطاء</li>
+                    <li>طلب حذف بياناتك</li>
+                    <li>سحب الموافقة على جمع البيانات</li>
+                </ul>
+            </div>
+
+            <h2>٩. التغييرات على السياسة</h2>
+            <p>سيتم تحديث هذه السياسة عند الحاجة، وسنخبرك عن التغييرات عبر:</p>
+            <ul>
+                <li>إشعار داخل التطبيق</li>
+                <li>تاريخ التحديث في أعلى هذه الصفحة</li>
+            </ul>
+
+            <h2>١٠. اتصل بنا</h2>
+            <div class="contact-methods">
+                <div>
+                    <strong>البريد الإلكتروني:</strong>
+                    <p><a href="mailto:moparmage.soft@gmail.com">moparmage.soft@gmail.com</a></p>
+                </div>
+                <div>
+                    <strong>المطور:</strong>
+                    <p>Developer Soft</p>
+                </div>
+                <div>
+                    <strong>وقت الاستجابة:</strong>
+                    <p>خلال 3-5 أيام عمل</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="en-content" style="display:none;">
+            <div class="highlight-box">
+                <p><strong>Developer Soft</strong> built the dafftar soft app as a Accountant app. This SERVICE is provided at  intended for use as is.</p>
+                <p>By using the app, you agree to the collection and use of information in accordance with this policy.</p>
+            </div>
+
+            <h2>1. Information We Collect</h2>
+            
+            <h3>A. Server-Sent Data</h3>
+            <p>When using the app, we send the following to our secure server:</p>
+            
+            <table class="data-table">
+                <tr>
+                    <th>Data Type</th>
+                    <th>Purpose</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Party Profile Code</td>
+                    <td>Unique profile identification</td>
+                    <td>PRF_12345</td>
+                </tr>
+                <tr>
+                    <td>Customer Count</td>
+                    <td>Statistical analysis</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Device ID</td>
+                    <td>Prevent unauthorized access</td>
+                    <td>d7f6g8h9</td>
+                </tr>
+            </table>
+            
+            <p>This data is sent to:<br>
+            <code>https://dafftar.com/api/mobile-module/party-profiles/CreatePartyProfile</code></p>
+
+            <h3>B. Local App Data</h3>
+            <p>The app stores these only on your device:</p>
+            <ul>
+                <li>User settings</li>
+                <li>Local profiles</li>
+                <li>App preferences</li>
+                <li>Backup files</li>
+            </ul>
+
+            <h2>2. Required Permissions</h2>
+            <table class="data-table">
+                <tr>
+                    <th>Permission</th>
+                    <th>Purpose</th>
+                    <th>When Used</th>
+                </tr>
+                <tr>
+                    <td>Storage Read/Write</td>
+                    <td>Backup file handling</td>
+                    <td>When requested by user</td>
+                </tr>
+                <tr>
+                    <td>Internet</td>
+                    <td>Server communication</td>
+                    <td>When opening the app</td>
+                </tr>
+                <tr>
+                    <td>Network State</td>
+                    <td>Check internet connection</td>
+                    <td>On app launch</td>
+                </tr>
+                <tr>
+                    <td>Notifications</td>
+                    <td>Send user alerts</td>
+                    <td>For important updates</td>
+                </tr>
+            </table>
+
+            <h2>3. Log Data & Analytics</h2>
+            <p>For error troubleshooting, we may log:</p>
+            <ul>
+                <li>Device model</li>
+                <li>OS version</li>
+                <li>Event timestamp</li>
+                <li>IP address (for security)</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <p>This data is anonymized and helps us improve the app.</p>
+            </div>
+
+            <h2>4. Data Protection</h2>
+            <p>We implement:</p>
+            <ol>
+                <li>256-bit SSL/TLS encryption</li>
+                <li>Secure servers with firewalls</li>
+                <li>Regular security updates</li>
+            </ol>
+
+            <h2>5. Data Retention</h2>
+            <p>Server data is retained for <strong>12 months</strong> from last activity before automatic deletion.</p>
+
+            <h2>6. Data Sharing</h2>
+            <p>We do not sell or share your data except when:</p>
+            <ul>
+                <li>Required by law</li>
+                <li>Necessary to protect user safety</li>
+            </ul>
+
+            <h2>7. Children's Privacy</h2>
+            <p>This app is not intended for children under 13. We:</p>
+            <ul>
+                <li>Do not knowingly collect data from children</li>
+                <li>Will delete any discovered child data immediately</li>
+            </ul>
+
+            <h2>8. Your Rights</h2>
+            <p>You can:</p>
+            <div class="highlight-box">
+                <ul>
+                    <li>Request data access</li>
+                    <li>Request corrections</li>
+                    <li>Request data deletion</li>
+                    <li>Withdraw consent</li>
+                </ul>
+            </div>
+
+            <h2>9. Policy Changes</h2>
+            <p>We will notify you of policy changes through:</p>
+            <ul>
+                <li>In-app notifications</li>
+                <li>Update date at the top of this page</li>
+            </ul>
+
+            <h2>10. Contact Us</h2>
+            <div class="contact-methods">
+                <div>
+                    <strong>Email:</strong>
+                    <p><a href="mailto:moparmage.soft@gmail.com">moparmage.soft@gmail.com</a></p>
+                </div>
+                <div>
+                    <strong>Developer:</strong>
+                    <p>Developer Soft</p>
+                </div>
+                <div>
+                    <strong>Response Time:</strong>
+                    <p>Within 3-5 business days</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p id="copyright">© 2024 دفتر سوفت. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            if (lang === 'ar') {
+                document.getElementById('ar-content').style.display = 'block';
+                document.getElementById('en-content').style.display = 'none';
+                document.getElementById('title').textContent = 'سياسة الخصوصية لـ دفتر سوفت';
+                document.getElementById('copyright').textContent = '© 2024 دفتر سوفت. جميع الحقوق محفوظة.';
+                document.documentElement.lang = 'ar';
+                document.documentElement.dir = 'rtl';
+            } else {
+                document.getElementById('ar-content').style.display = 'none';
+                document.getElementById('en-content').style.display = 'block';
+                document.getElementById('title').textContent = 'Privacy Policy - Soft Notebook';
+                document.getElementById('copyright').textContent = '© 2024 Soft Notebook. All rights reserved.';
+                document.documentElement.lang = 'en';
+                document.documentElement.dir = 'ltr';
+            }
+        }
+    </script>
 </body>
 </html>
